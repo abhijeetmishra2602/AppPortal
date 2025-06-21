@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <h2>Hello Admin</h2>
+        <form>
+            <div class="form-group">
+                <label for="appName">App Name</label>
+                <input type="text" class="form-control" id="appName" placeholder="Enter App Name">
+            </div>
+            <div class="form-group">
+                <label for="appCategory">App Category</label>
+                <select class="form-control" id="appCategory">
+                    <option>Social Media</option>
+                    <option>Entertainment</option>
+                    <!-- Add more categories as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Points</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h2>Add App</h2>
+        <form>
+            <div class="form-group">
+                <label for="appImage">App Image</label>
+                <input type="file" class="form-control-file" id="appImage">
+            </div>
+            <div class="form-group">
+                <label for="appUrl">App URL</label>
+                <input type="text" class="form-control" id="appUrl" placeholder="Enter App URL">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    {% for app in apps %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ app.image_url|default:'https://via.placeholder.com/150' }}" class="card-img-top" alt="{{ app.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ app.name }}</h5>
+                <p class="card-text">{{ app.points }} POINTS</p>
+                <a href="{% url 'app_detail' app.id %}" class="btn btn-primary">View in Detail</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -105,8 +105,9 @@ WSGI_APPLICATION = 'app_portal.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",  # fallback
-        conn_max_age=600,
-        ssl_require=True
+        conn_max_age=600
+        # ,
+        # ssl_require=True
     )
 }
 
